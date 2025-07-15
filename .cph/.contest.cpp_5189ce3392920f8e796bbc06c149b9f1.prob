@@ -1,0 +1,1 @@
+{"name":"Local: contest","url":"e:\\My files\\C program\\contest.cpp","tests":[{"id":1733980577310,"input":"7\n6\naaabcc\n10\naaaaaaaaaa\n6\nabcdef\n7\nabacaba\n6\ncccfff\n4\nabba\n5\nababa\n","output":"4\n1\n5\n3\n3\n3\n1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\My files\\C program\\contest.cpp","group":"local","local":true}

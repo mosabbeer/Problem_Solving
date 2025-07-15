@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int n,a[1000]={0},i,p,count=0,j;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&p);
+        a[p]=1;
+    }
+    for(i=1;i<=100;i++)
+    {
+        for(j=i+1;j<=101;j++)
+        {
+            if(a[j]==0)
+                j++;
+            if(a[i]==0)
+                j=j+n;
+            else
+            {
+            p=i;
+            if(j%p==0)
+            a[j]=0;
+            }
+        }
+        if(a[i]!=0)
+            count++;
+    }
+    printf("%d\n",count);
+}

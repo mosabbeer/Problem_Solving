@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+    int t,i;
+    scanf("%d",&t);
+    for(i=0;i<t;i++)
+    {
+        int n,a[100],b[100],j,k,temp,p=0;
+        scanf("%d",&n);
+        for(j=0;j<n;j++)
+            scanf("%d",&a[j]);
+        for(j=0;j<n-1;j++)
+        {
+            for(k=j+1;k<n;k++)
+            {
+                if(a[j]<a[k])
+                {
+                    temp=a[k];
+                    a[k]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        for(j=0;j<n-1;j++)
+        {
+            b[j]=a[j]-a[j+1];
+        }
+        for(j=0;j<n-1;j++)
+        {
+            if(b[j]>1)
+                p++;
+            if(p>0)
+                break;
+        }
+        if(p==0)
+            printf("YES\n");
+        else
+            printf("NO\n");
+    }
+}

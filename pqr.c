@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main()
+{
+    int n,a[1000],b[1000],temp,i,j,sum=0,p=0;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&a[i]);
+        b[i]=a[i];
+    }
+    for(i=1;i<n;i++)
+    {
+        for(j=i;j<=n;j++)
+        {
+            if(b[i]<b[j])
+            {
+                temp=b[j];
+                b[j]=b[i];
+                b[i]=temp;
+            }
+        }
+    }
+    j=1;
+    for(i=2;i<=n;i++)
+    {
+        sum=sum+b[i]*j+1;
+        j++;
+    }
+    sum=sum+1;
+    printf("%d\n",sum);
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=n;j++)
+        {
+            if(b[i]==a[j])
+            {
+                p=1;
+                a[j]=-999;
+                printf("%d ",j);
+                if(p==1)
+                j=n+1;
+            }
+        }
+    }
+}

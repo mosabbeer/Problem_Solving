@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main()
+{
+    int n,a[10],sum=0,i,p;
+    scanf("%d",&n);
+    for(i=1;i<8;i++)
+    {
+        scanf("%d",&a[i]);
+        sum=sum+a[i];
+    }
+    if(sum>=n)
+    {
+        sum=0;
+        for(i=1;i<8;i++)
+        {
+            sum=sum+a[i];
+            if(sum>=n)
+                break;
+        }
+        printf("%d",i);
+    }
+    else if(n%sum==0)
+    {
+        p=n/sum;
+        sum=sum*(p-1);
+        for(i=1;i<8;i++)
+        {
+            sum=sum+a[i];
+            if(sum>=n)
+                break;
+        }
+        printf("%d",i);
+    }
+    else
+    {
+        p=n/sum;
+        sum=sum*p;
+        for(i=1;i<8;i++)
+        {
+            sum=sum+a[i];
+            if(sum>=n)
+                break;
+        }
+        printf("%d",i);
+    }
+}

@@ -1,0 +1,62 @@
+#include<stdio.h>
+int main()
+{
+   long long int n,a[10000],sum=0,i,p,count=0,temp,j;
+    scanf("%lld",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%lld",&a[i]);
+        if(a[i]<0)
+            count++;
+        else if(a[i]==0)
+        {
+            a[i]=1;
+            sum++;
+        }
+        else if(a[i]>1)
+        {
+            p=a[i]-1;
+            a[i]=1;
+            sum=sum+p;
+        }
+
+    }
+    if(count%2==0)
+    {
+        for(i=0;i<n;i++)
+        {
+            if(a[i]<0)
+            sum=sum-(1+a[i]);
+        }
+    }
+    else
+    {
+        for(i=0;i<n-1;i++)
+        {
+            for(j=0;j<n;j++)
+            {
+                if(a[j]>a[i])
+                {
+                    temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+            }
+        }
+        for(i=0;i<n;i++)
+        {
+            if(a[i]<0)
+            {
+                sum=sum+1-a[i];
+                a[i]=1;
+                break;
+            }
+        }
+        for(i=0;i<n;i++)
+        {
+            if(a[i]<0)
+            sum=sum-(1+a[i]);
+        }
+    }
+    printf("%lld",sum);
+}
