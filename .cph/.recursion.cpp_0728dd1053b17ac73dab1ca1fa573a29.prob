@@ -1,0 +1,1 @@
+{"name":"Local: recursion","url":"c:\\Users\\Lenovo\\OneDrive\\Desktop\\Cp\\recursion.cpp","tests":[{"id":1716357432757,"input":"3\n1 2 3","output":""},{"id":1716378457889,"input":"1\n3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Lenovo\\OneDrive\\Desktop\\Cp\\recursion.cpp","group":"local","local":true}
