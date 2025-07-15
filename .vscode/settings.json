@@ -1,6 +1,13 @@
 {
+<<<<<<< HEAD
     "files.associations": {
         "iostream": "cpp",
         "random": "cpp"
+=======
+    "C_Cpp.errorSquiggles": "disabled",
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "iostream": "cpp"
+>>>>>>> 3f47f41b2d17c13cf5334cec5206840e22230c35
     }
 }
